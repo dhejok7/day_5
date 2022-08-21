@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let rotate = () => {
+        let k = 3;
+        function arrayRotate(arr, reverse) {
+          if (reverse) {
+            for (let i = 0; i < k; i++) {
+              arr.unshift(arr.pop());
+            }
+          } else {
+            for (let i = 0; i < k; i++) {
+              arr.push(arr.shift());
+            }
+          }
+          return arr;
+        }
+        console.log("clock-wise:");
+        console.log(arrayRotate([1, 2, 3, 4, 5], true));
+        console.log("anti clock-wise:");
+        console.log(arrayRotate([1, 2, 3, 4, 5]));
+      };
+
+      rotate();
+    </script>
+  </head>
+  <body>
+    <h2>paindrome in an array</h2>
+  </body>
+</html>
